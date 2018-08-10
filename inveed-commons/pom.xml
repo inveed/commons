@@ -1,10 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.inveed</groupId>
 	<artifactId>inveed-commons</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>Inveed - Common Libs</name>
 	<description>Common classes for all other libraries and projects</description>
 	<url>https://github.com/inveed/commons/tree/master/inveed-commons</url>
@@ -20,7 +18,8 @@
 		<url>https://github.com/inveed/commons</url>
 		<connection>scm:git:git://github.com/inveed/commons.git</connection>
 		<developerConnection>scm:git:git@github.com:inveed/commons.git</developerConnection>
-	</scm>
+	  <tag>v0.0.1</tag>
+  </scm>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
