@@ -1,4 +1,4 @@
-package net.inveed.commons;
+package net.inveed.commons.cache;
 
 import java.util.Map;
 import java.util.Set;
@@ -66,6 +66,5 @@ public class Cache<K, V> {
 	public Set<K> keySet() {
 		return this.cache.keySet();
 	}
-
 }
 

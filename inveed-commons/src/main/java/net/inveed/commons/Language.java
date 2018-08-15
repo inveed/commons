@@ -3,7 +3,7 @@ package net.inveed.commons;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import net.inveed.commons.annotations.EnumDisplayValue;
+import net.inveed.commons.reflection.annotation.EnumDisplayValue;
 
 public enum Language {
 	UNKNOWN("Unknown", "Unknown", "None", "", "", "", "Unknown"),

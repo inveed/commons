@@ -1,4 +1,4 @@
-package net.inveed.commons;
+package net.inveed.commons.cache;
 
 import java.util.ArrayList;
 
