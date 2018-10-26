@@ -6,7 +6,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -422,7 +424,33 @@ public final class BeanPropertyDesc {
 			}
 		}
 	}
-
+	public List<Annotation> getAnnotatedAnnotations(Class<? extends Annotation> atype) {
+		ArrayList<Annotation> ret = new ArrayList<>();
+		if (this.field != null) {
+			for (Annotation a : this.field.getAnnotations()) {
+				Class<? extends Annotation> aclass = a.annotationType();
+				if (aclass.getAnnotation(atype) != null) { 
+					ret.add(a);
+				}
+			}
+		}
+		if (this.getter != null) {
+			for (Annotation a : this.getter.getAnnotations()) {
+				if (a.getClass().getAnnotation(atype) != null) { 
+					ret.add(a);
+				}
+			}
+		}
+		if (this.setter != null) {
+			for (Annotation a : this.setter.getAnnotations()) {
+				if (a.getClass().getAnnotation(atype) != null) { 
+					ret.add(a);
+				}
+			}
+		}
+		
+		return ret;
+	}
 	public <T extends Annotation> T getAnnotation(Class<T> type) {
 		T ret = null;
 		
